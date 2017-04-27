@@ -18,5 +18,9 @@ document.documentElement.addEventListener('click', (e) => {
   }
   const path = rightArrowParents.reverse().join(' ').replace(/\.ng[-\w]+/g, '');
 
-  ipcRenderer.send('test', path);
+  ipcRenderer.send('click', path);
+});
+
+document.documentElement.addEventListener('keydown', (e) => {
+  ipcRenderer.send('keydown', e.keyCode);
 });
