@@ -22,6 +22,7 @@ function createWindow() {
     });
   });
 
+
   ipcMain.on('keydown', (e, keyCode) => {
     eventList.push({
       event: 'keydown',
